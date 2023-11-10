@@ -6,10 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -18,13 +15,16 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.wonderers.codex.android.ui.components.PlaceImage
+import com.wonderers.codex.android.ui.components.PlaceTitle
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,18 +45,28 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun Content() {
-    BottomSheetScaffold(
-        sheetContent = {
-            PlacesBottomSheet()
-        },
-        content = {
-            MapStub()
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = "map") {
+        composable("map") {
+            BottomSheetScaffold(
+                sheetContent = {
+                    PlacesBottomSheet(
+                        onPlaceClicked = { navController.navigate("place") }
+                    )
+                },
+                content = {
+                    MapStub()
+                }
+            )
         }
-    )
+        composable("place") {
+            PlaceDetails(place = mockPlaces.first())
+        }
+    }
 }
 
 @Composable
-private fun PlacesBottomSheet() {
+private fun PlacesBottomSheet(onPlaceClicked: () -> Unit) {
     Column(
         modifier = Modifier
             .verticalScroll(rememberScrollState())
@@ -64,36 +74,17 @@ private fun PlacesBottomSheet() {
         verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
         for (place in mockPlaces) {
-            Card {
-                Image(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .aspectRatio(16f / 10f),
-                    painter = painterResource(id = place.previewImageRes),
-                    contentScale = ContentScale.Crop,
-                    contentDescription = null
-                )
-                Column(
-                    modifier = Modifier.padding(8.dp),
-                ) {
-                    Row {
-                        Text(
-                            text = place.type.name,
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                        Text(text = " • ")
-                        Text(
-                            text = "${place.distance}m",
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                    }
-                    Text(
-                        text = place.title,
-                        style = MaterialTheme.typography.headlineMedium
-                    )
-                }
-            }
+            PlaceCard(place, onPlaceClicked)
         }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun PlaceCard(place: MockPlace, onPlaceClicked: () -> Unit) {
+    Card(onClick = onPlaceClicked) {
+        PlaceImage(place.previewImageRes)
+        PlaceTitle(place)
     }
 }
 
@@ -105,10 +96,12 @@ private fun MapStub() {
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MyApplicationTheme {
-        MapStub()
+    MyApplicationTheme(darkTheme = false) {
+        PlacesBottomSheet(
+            onPlaceClicked = {}
+        )
     }
 }
