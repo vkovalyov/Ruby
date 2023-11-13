@@ -15,5 +15,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Ruby"
-include(":Codex")
+include(":codex-android")
 include(":shared")
