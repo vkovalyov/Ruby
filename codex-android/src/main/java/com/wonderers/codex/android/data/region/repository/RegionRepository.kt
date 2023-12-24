@@ -1,6 +1,6 @@
 package com.wonderers.codex.android.data.region.repository
 
-import com.wonderers.codex.android.common.Coordinates
+import com.wonderers.codex.android.common.model.Coordinates
 import com.wonderers.codex.android.data.region.model.Region
 
 interface RegionRepository {

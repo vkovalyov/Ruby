@@ -1,7 +1,7 @@
 package com.wonderers.codex.android.data.region.repository.mock
 
-import com.wonderers.codex.android.common.Coordinates
-import com.wonderers.codex.android.common.RegionId
+import com.wonderers.codex.android.common.model.Coordinates
+import com.wonderers.codex.android.common.model.RegionId
 import com.wonderers.codex.android.data.region.model.Region
 import com.wonderers.codex.android.data.region.repository.RegionRepository
 

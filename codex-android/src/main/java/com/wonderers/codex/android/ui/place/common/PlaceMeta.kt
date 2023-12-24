@@ -4,18 +4,17 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import com.wonderers.codex.android.MockPlace
 
 @Composable
-fun PlaceMeta(place: MockPlace) {
+fun PlaceMeta(typeName: String, placeDistance: String) {
     Row {
         Text(
-            text = place.type.name,
+            text = typeName,
             color = MaterialTheme.colorScheme.primary
         )
         Text(text = " • ")
         Text(
-            text = "${place.distance}m",
+            text = placeDistance,
             color = MaterialTheme.colorScheme.primary
         )
     }

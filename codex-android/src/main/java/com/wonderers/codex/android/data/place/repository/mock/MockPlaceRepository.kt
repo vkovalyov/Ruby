@@ -1,8 +1,8 @@
 package com.wonderers.codex.android.data.place.repository.mock
 
 import com.wonderers.codex.android.data.place.model.Place
-import com.wonderers.codex.android.common.PlaceId
-import com.wonderers.codex.android.common.RegionId
+import com.wonderers.codex.android.common.model.PlaceId
+import com.wonderers.codex.android.common.model.RegionId
 import com.wonderers.codex.android.data.place.repository.PlaceRepository
 
 class MockPlaceRepository : PlaceRepository {

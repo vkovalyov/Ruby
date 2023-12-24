@@ -1,9 +1,9 @@
 package com.wonderers.codex.android.data.place.repository.mock
 
 import com.wonderers.codex.android.R
-import com.wonderers.codex.android.common.CodexImage
+import com.wonderers.codex.android.common.model.CodexImage
 import com.wonderers.codex.android.data.place.model.Place
-import com.wonderers.codex.android.common.PlaceId
+import com.wonderers.codex.android.common.model.PlaceId
 import com.wonderers.codex.android.data.place.model.PlaceReference
 import com.wonderers.codex.android.data.place.model.PlaceType
 

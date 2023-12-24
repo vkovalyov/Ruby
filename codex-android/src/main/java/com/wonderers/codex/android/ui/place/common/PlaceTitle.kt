@@ -5,14 +5,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.wonderers.codex.android.MockPlace
 
 @Composable
-fun PlaceTitle(place: MockPlace) {
+fun PlaceTitle(
+    placeName: String,
+    typeName: String,
+    distance: String
+) {
     Column(
         modifier = Modifier.padding(8.dp),
     ) {
-        PlaceMeta(place)
-        PlaceName(place)
+        PlaceMeta(typeName, distance)
+        PlaceName(placeName)
     }
 }
