@@ -1,4 +1,4 @@
-package com.wonderers.codex.android.ui.components
+package com.wonderers.codex.android.ui.place.common
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image

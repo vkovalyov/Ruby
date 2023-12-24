@@ -1,4 +1,4 @@
-package com.wonderers.codex.android.ui.components
+package com.wonderers.codex.android.ui.place.common
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text

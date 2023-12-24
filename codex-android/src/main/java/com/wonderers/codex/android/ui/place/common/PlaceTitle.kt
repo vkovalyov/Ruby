@@ -1,4 +1,4 @@
-package com.wonderers.codex.android.ui.components
+package com.wonderers.codex.android.ui.place.common
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding

@@ -1,4 +1,4 @@
-package com.wonderers.codex.android
+package com.wonderers.codex.android.ui.place.details
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -11,8 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.wonderers.codex.android.ui.components.PlaceImage
-import com.wonderers.codex.android.ui.components.PlaceTitle
+import com.wonderers.codex.android.MockPlace
+import com.wonderers.codex.android.MyApplicationTheme
+import com.wonderers.codex.android.mockPlaces
+import com.wonderers.codex.android.ui.place.common.PlaceImage
+import com.wonderers.codex.android.ui.place.common.PlaceTitle
 
 @Preview(showBackground = true, backgroundColor = 0xffffff)
 @Composable

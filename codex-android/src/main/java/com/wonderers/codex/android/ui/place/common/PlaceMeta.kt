@@ -1,4 +1,4 @@
-package com.wonderers.codex.android.ui.components
+package com.wonderers.codex.android.ui.place.common
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.MaterialTheme
