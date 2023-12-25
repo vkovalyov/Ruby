@@ -4,17 +4,17 @@ import androidx.lifecycle.ViewModel
 import com.wonderers.codex.android.common.util.hideIn
 import com.wonderers.codex.android.common.util.launch
 import com.wonderers.codex.android.data.place.model.Place
-import com.wonderers.codex.android.data.place.repository.mock.MockPlaceRepository
-import com.wonderers.codex.android.data.region.repository.mock.MockRegionRepository
+import com.wonderers.codex.android.data.place.repository.PlaceRepository
+import com.wonderers.codex.android.data.region.repository.RegionRepository
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
-class PlacesListVm : ViewModel() {
+class PlacesListVm : ViewModel(), KoinComponent {
 
-    private val regionRepository = MockRegionRepository()
-    private val placeRepository = MockPlaceRepository()
+    private val regionRepository by inject<RegionRepository>()
+    private val placeRepository by inject<PlaceRepository>()
 
     private val _uiState = MutableStateFlow<PlacesListUiState>(PlacesListUiState.Loading)
     val uiState = _uiState.hideIn(this)

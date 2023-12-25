@@ -47,5 +47,7 @@ dependencies {
     implementation(libs.compose.viewmodel)
     implementation(libs.compose.runtime.lifecycle)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.android)
     debugImplementation(libs.compose.ui.tooling)
 }
