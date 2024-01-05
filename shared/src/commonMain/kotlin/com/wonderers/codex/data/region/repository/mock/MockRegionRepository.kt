@@ -1,9 +1,9 @@
-package com.wonderers.codex.android.data.region.repository.mock
+package com.wonderers.codex.data.region.repository.mock
 
-import com.wonderers.codex.android.common.model.Coordinates
-import com.wonderers.codex.android.common.model.RegionId
-import com.wonderers.codex.android.data.region.model.Region
-import com.wonderers.codex.android.data.region.repository.RegionRepository
+import com.wonderers.codex.common.model.Coordinates
+import com.wonderers.codex.common.model.RegionId
+import com.wonderers.codex.data.region.model.Region
+import com.wonderers.codex.data.region.repository.RegionRepository
 
 class MockRegionRepository : RegionRepository {
 

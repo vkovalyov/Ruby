@@ -1,7 +1,7 @@
-package com.wonderers.codex.android.data.place.model
+package com.wonderers.codex.data.place.model
 
-import com.wonderers.codex.android.common.model.CodexImage
-import com.wonderers.codex.android.common.model.PlaceId
+import com.wonderers.codex.common.model.CodexImage
+import com.wonderers.codex.common.model.PlaceId
 
 data class Place(
     val id: PlaceId,

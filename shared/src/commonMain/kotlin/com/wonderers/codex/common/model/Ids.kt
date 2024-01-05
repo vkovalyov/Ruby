@@ -1,4 +1,6 @@
-package com.wonderers.codex.android.common.model
+package com.wonderers.codex.common.model
+
+import kotlin.jvm.JvmInline
 
 @JvmInline
 value class PlaceId(val id: String)

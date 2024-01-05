@@ -1,11 +1,11 @@
-package com.wonderers.codex.android.data.place.repository.mock
+package com.wonderers.codex.data.place.repository.mock
 
-import com.wonderers.codex.android.R
-import com.wonderers.codex.android.common.model.CodexImage
-import com.wonderers.codex.android.data.place.model.Place
-import com.wonderers.codex.android.common.model.PlaceId
-import com.wonderers.codex.android.data.place.model.PlaceReference
-import com.wonderers.codex.android.data.place.model.PlaceType
+import com.wonderers.codex.R
+import com.wonderers.codex.common.model.CodexImage
+import com.wonderers.codex.data.place.model.Place
+import com.wonderers.codex.common.model.PlaceId
+import com.wonderers.codex.data.place.model.PlaceReference
+import com.wonderers.codex.data.place.model.PlaceType
 
 val mockPlaces = listOf(
     Place(

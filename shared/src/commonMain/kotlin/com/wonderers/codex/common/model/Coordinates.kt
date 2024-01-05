@@ -1,4 +1,4 @@
-package com.wonderers.codex.android.common.model
+package com.wonderers.codex.common.model
 
 data class Coordinates(
     val latitude: Double,

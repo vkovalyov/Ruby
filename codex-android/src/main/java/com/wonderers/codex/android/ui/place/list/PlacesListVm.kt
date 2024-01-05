@@ -3,9 +3,9 @@ package com.wonderers.codex.android.ui.place.list
 import androidx.lifecycle.ViewModel
 import com.wonderers.codex.android.common.util.hideIn
 import com.wonderers.codex.android.common.util.launch
-import com.wonderers.codex.android.data.place.model.Place
-import com.wonderers.codex.android.data.place.repository.PlaceRepository
-import com.wonderers.codex.android.data.region.repository.RegionRepository
+import com.wonderers.codex.data.place.model.Place
+import com.wonderers.codex.data.place.repository.PlaceRepository
+import com.wonderers.codex.data.region.repository.RegionRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import org.koin.core.component.KoinComponent

@@ -1,10 +1,10 @@
 package com.wonderers.codex.android.di
 
 import android.content.Context
-import com.wonderers.codex.android.data.place.repository.PlaceRepository
-import com.wonderers.codex.android.data.place.repository.mock.MockPlaceRepository
-import com.wonderers.codex.android.data.region.repository.RegionRepository
-import com.wonderers.codex.android.data.region.repository.mock.MockRegionRepository
+import com.wonderers.codex.data.place.repository.PlaceRepository
+import com.wonderers.codex.data.place.repository.mock.MockPlaceRepository
+import com.wonderers.codex.data.region.repository.RegionRepository
+import com.wonderers.codex.data.region.repository.mock.MockRegionRepository
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

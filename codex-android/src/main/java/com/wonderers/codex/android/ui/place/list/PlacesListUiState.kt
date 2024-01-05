@@ -1,8 +1,7 @@
 package com.wonderers.codex.android.ui.place.list
 
-import com.wonderers.codex.android.common.model.CodexImage
-import com.wonderers.codex.android.common.model.PlaceId
-import com.wonderers.codex.android.data.place.model.PlaceReference
+import com.wonderers.codex.common.model.CodexImage
+import com.wonderers.codex.common.model.PlaceId
 
 sealed interface PlacesListUiState {
 
