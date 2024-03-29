@@ -3,7 +3,6 @@ package com.wonderers.codex.android.ui.place.map
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
-import com.wonderers.codex.android.R
 
 @Composable
 fun PlacesMap() {
@@ -14,7 +13,7 @@ fun PlacesMap() {
 @Composable
 private fun MapStub() {
     Image(
-        painter = painterResource(id = R.drawable.map_stub),
+        painter = painterResource(id = com.wonderers.codex.R.drawable.map_stub),
         contentDescription = null
     )
 }

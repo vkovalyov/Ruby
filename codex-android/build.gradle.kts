@@ -39,15 +39,20 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.compose.bom))
     implementation(projects.shared)
+
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.compose.navigation)
     implementation(libs.compose.viewmodel)
     implementation(libs.compose.runtime.lifecycle)
+
     implementation(libs.androidx.activity.compose)
+
     implementation(libs.koin.compose)
     implementation(libs.koin.android)
+
     debugImplementation(libs.compose.ui.tooling)
 }
